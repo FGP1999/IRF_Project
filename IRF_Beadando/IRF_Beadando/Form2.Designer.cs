@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.NevLabel = new System.Windows.Forms.Label();
+            this.IntervallumLabel = new System.Windows.Forms.Label();
+            this.TablaMeretLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // NevLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.NevLabel.AutoSize = true;
+            this.NevLabel.Location = new System.Drawing.Point(84, 62);
+            this.NevLabel.Name = "NevLabel";
+            this.NevLabel.Size = new System.Drawing.Size(35, 13);
+            this.NevLabel.TabIndex = 0;
+            this.NevLabel.Text = "label1";
             // 
-            // label2
+            // IntervallumLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.IntervallumLabel.AutoSize = true;
+            this.IntervallumLabel.Location = new System.Drawing.Point(68, 132);
+            this.IntervallumLabel.Name = "IntervallumLabel";
+            this.IntervallumLabel.Size = new System.Drawing.Size(35, 13);
+            this.IntervallumLabel.TabIndex = 1;
+            this.IntervallumLabel.Text = "label2";
             // 
-            // label3
+            // TablaMeretLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.TablaMeretLabel.AutoSize = true;
+            this.TablaMeretLabel.Location = new System.Drawing.Point(67, 185);
+            this.TablaMeretLabel.Name = "TablaMeretLabel";
+            this.TablaMeretLabel.Size = new System.Drawing.Size(35, 13);
+            this.TablaMeretLabel.TabIndex = 2;
+            this.TablaMeretLabel.Text = "label3";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TablaMeretLabel);
+            this.Controls.Add(this.IntervallumLabel);
+            this.Controls.Add(this.NevLabel);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -77,8 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NevLabel;
+        private System.Windows.Forms.Label IntervallumLabel;
+        private System.Windows.Forms.Label TablaMeretLabel;
     }
 }

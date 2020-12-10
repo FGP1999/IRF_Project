@@ -16,15 +16,14 @@ namespace IRF_Beadando
         {
             InitializeComponent();
         }
-        
+
         private void StartButton_Click(object sender, EventArgs e)
         {
-            string nev = NevTextBox.Text;
-            int intervallum = int.Parse(IntervallumTextBox.Text);
-            int tablaMeret = int.Parse(TablameretTextBox.Text);
-            Form2 f2 = new Form2(nev, intervallum, tablaMeret);
+            string neve = NevTextBox.Text;
+            int interval = Decimal.ToInt32(IntervalNumericUpDown.Value);
+            int merete = Decimal.ToInt32(SizeNumericUpDown.Value);
+            Form2 f2 = new Form2(neve, interval, merete);
             f2.ShowDialog();
-
         }
     }
 }

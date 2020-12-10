@@ -30,8 +30,10 @@
         {
             this.StartButton = new System.Windows.Forms.Button();
             this.NevTextBox = new System.Windows.Forms.TextBox();
-            this.IntervallumTextBox = new System.Windows.Forms.TextBox();
-            this.TablameretTextBox = new System.Windows.Forms.TextBox();
+            this.IntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.SizeNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.IntervalNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SizeNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // StartButton
@@ -51,31 +53,68 @@
             this.NevTextBox.Size = new System.Drawing.Size(100, 20);
             this.NevTextBox.TabIndex = 1;
             // 
-            // IntervallumTextBox
+            // IntervalNumericUpDown
             // 
-            this.IntervallumTextBox.Location = new System.Drawing.Point(129, 158);
-            this.IntervallumTextBox.Name = "IntervallumTextBox";
-            this.IntervallumTextBox.Size = new System.Drawing.Size(100, 20);
-            this.IntervallumTextBox.TabIndex = 2;
+            this.IntervalNumericUpDown.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.IntervalNumericUpDown.Location = new System.Drawing.Point(129, 155);
+            this.IntervalNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.IntervalNumericUpDown.Minimum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.IntervalNumericUpDown.Name = "IntervalNumericUpDown";
+            this.IntervalNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.IntervalNumericUpDown.TabIndex = 4;
+            this.IntervalNumericUpDown.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             // 
-            // TablameretTextBox
+            // SizeNumericUpDown
             // 
-            this.TablameretTextBox.Location = new System.Drawing.Point(129, 220);
-            this.TablameretTextBox.Name = "TablameretTextBox";
-            this.TablameretTextBox.Size = new System.Drawing.Size(100, 20);
-            this.TablameretTextBox.TabIndex = 3;
+            this.SizeNumericUpDown.Location = new System.Drawing.Point(129, 209);
+            this.SizeNumericUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.SizeNumericUpDown.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.SizeNumericUpDown.Name = "SizeNumericUpDown";
+            this.SizeNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.SizeNumericUpDown.TabIndex = 5;
+            this.SizeNumericUpDown.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TablameretTextBox);
-            this.Controls.Add(this.IntervallumTextBox);
+            this.Controls.Add(this.SizeNumericUpDown);
+            this.Controls.Add(this.IntervalNumericUpDown);
             this.Controls.Add(this.NevTextBox);
             this.Controls.Add(this.StartButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.IntervalNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SizeNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,8 +124,8 @@
 
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.TextBox NevTextBox;
-        private System.Windows.Forms.TextBox IntervallumTextBox;
-        private System.Windows.Forms.TextBox TablameretTextBox;
+        private System.Windows.Forms.NumericUpDown IntervalNumericUpDown;
+        private System.Windows.Forms.NumericUpDown SizeNumericUpDown;
     }
 }
 
