@@ -34,7 +34,6 @@ namespace IRF_Beadando
             IsClicked = false;
             Height = 50;
             Width = Height;
-            //BackColor = Color.White;
             MouseDown += GameField_MouseDown;
         }
 

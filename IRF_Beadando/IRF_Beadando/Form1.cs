@@ -16,7 +16,7 @@ namespace IRF_Beadando
         {
             InitializeComponent();
         }
-
+ 
         private void StartButton_Click(object sender, EventArgs e)
         {
             string neve = NevTextBox.Text;
