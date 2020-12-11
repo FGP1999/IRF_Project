@@ -28,46 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NevLabel = new System.Windows.Forms.Label();
-            this.IntervallumLabel = new System.Windows.Forms.Label();
-            this.TablaMeretLabel = new System.Windows.Forms.Label();
+            this.NevSajatLabel = new IRF_Beadando.SajatLabel();
+            this.PontSajatLabel = new IRF_Beadando.SajatLabel();
+            this.IntervalSajatLabel = new IRF_Beadando.SajatLabel();
             this.SuspendLayout();
             // 
-            // NevLabel
+            // NevSajatLabel
             // 
-            this.NevLabel.AutoSize = true;
-            this.NevLabel.Location = new System.Drawing.Point(84, 62);
-            this.NevLabel.Name = "NevLabel";
-            this.NevLabel.Size = new System.Drawing.Size(35, 13);
-            this.NevLabel.TabIndex = 0;
-            this.NevLabel.Text = "label1";
+            this.NevSajatLabel.AutoSize = true;
+            this.NevSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.NevSajatLabel.Location = new System.Drawing.Point(12, 9);
+            this.NevSajatLabel.Name = "NevSajatLabel";
+            this.NevSajatLabel.Size = new System.Drawing.Size(79, 19);
+            this.NevSajatLabel.TabIndex = 0;
+            this.NevSajatLabel.Text = "sajatLabel1";
             // 
-            // IntervallumLabel
+            // PontSajatLabel
             // 
-            this.IntervallumLabel.AutoSize = true;
-            this.IntervallumLabel.Location = new System.Drawing.Point(68, 132);
-            this.IntervallumLabel.Name = "IntervallumLabel";
-            this.IntervallumLabel.Size = new System.Drawing.Size(35, 13);
-            this.IntervallumLabel.TabIndex = 1;
-            this.IntervallumLabel.Text = "label2";
+            this.PontSajatLabel.AutoSize = true;
+            this.PontSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.PontSajatLabel.Location = new System.Drawing.Point(13, 53);
+            this.PontSajatLabel.Name = "PontSajatLabel";
+            this.PontSajatLabel.Size = new System.Drawing.Size(79, 19);
+            this.PontSajatLabel.TabIndex = 1;
+            this.PontSajatLabel.Text = "sajatLabel2";
             // 
-            // TablaMeretLabel
+            // IntervalSajatLabel
             // 
-            this.TablaMeretLabel.AutoSize = true;
-            this.TablaMeretLabel.Location = new System.Drawing.Point(67, 185);
-            this.TablaMeretLabel.Name = "TablaMeretLabel";
-            this.TablaMeretLabel.Size = new System.Drawing.Size(35, 13);
-            this.TablaMeretLabel.TabIndex = 2;
-            this.TablaMeretLabel.Text = "label3";
+            this.IntervalSajatLabel.AutoSize = true;
+            this.IntervalSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.IntervalSajatLabel.Location = new System.Drawing.Point(13, 99);
+            this.IntervalSajatLabel.Name = "IntervalSajatLabel";
+            this.IntervalSajatLabel.Size = new System.Drawing.Size(79, 19);
+            this.IntervalSajatLabel.TabIndex = 2;
+            this.IntervalSajatLabel.Text = "sajatLabel3";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TablaMeretLabel);
-            this.Controls.Add(this.IntervallumLabel);
-            this.Controls.Add(this.NevLabel);
+            this.Controls.Add(this.IntervalSajatLabel);
+            this.Controls.Add(this.PontSajatLabel);
+            this.Controls.Add(this.NevSajatLabel);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -77,8 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label NevLabel;
-        private System.Windows.Forms.Label IntervallumLabel;
-        private System.Windows.Forms.Label TablaMeretLabel;
+        private SajatLabel NevSajatLabel;
+        private SajatLabel PontSajatLabel;
+        private SajatLabel IntervalSajatLabel;
     }
 }

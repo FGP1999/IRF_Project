@@ -10,6 +10,7 @@ namespace IRF_Beadando
 {
     class GameField : Button
     {
+        public int Value { get; set; }
         private bool _isClicked;
 
         public bool IsClicked
@@ -18,13 +19,9 @@ namespace IRF_Beadando
             set
             {
                 _isClicked = value;
-                if (_isClicked == true)
+                if (_isClicked == true && BackColor == Color.Red)
                 {
-                    BackColor = Color.Yellow;
-                }
-                else if (_isClicked == false)
-                {
-                    BackColor = Color.White;
+                    Value++;
                 }
             }
         }
@@ -34,19 +31,14 @@ namespace IRF_Beadando
             IsClicked = false;
             Height = 50;
             Width = Height;
+            FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            SetStyle(ControlStyles.Selectable, false);
             MouseDown += GameField_MouseDown;
         }
 
         private void GameField_MouseDown(object sender, MouseEventArgs e)
         {
-            if (IsClicked == false)
-            {
-                IsClicked = true;
-            }
-            else
-            {
-                IsClicked = false;
-            }
+            IsClicked = true;
         }
     }
 }

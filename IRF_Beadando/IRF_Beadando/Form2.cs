@@ -20,9 +20,8 @@ namespace IRF_Beadando
         {
             InitializeComponent();
             CreatePlayField(meret);
-            NevLabel.Text = nev;
-            IntervallumLabel.Text = inter.ToString();
-            TablaMeretLabel.Text = meret.ToString();
+            NevSajatLabel.Text = nev;
+            IntervalSajatLabel.Text = inter.ToString();
             osszmezo = meret;
             t.Enabled = true;
             t.Interval = inter;
@@ -40,6 +39,7 @@ namespace IRF_Beadando
                     gf.Top = row * gf.Height + (int)(Math.Floor((double)(row / tablaMeret))) + 20;
                     FieldElements.Add(gf);
                     Controls.Add(gf);
+
                 }
             }
         }
@@ -51,7 +51,6 @@ namespace IRF_Beadando
 
             for (int i = 0; i < FieldElements.Count; i++)
             {
-                FieldElements[i].BackColor = Color.White;
                 if (i == pirosHelye)
                 {
                     FieldElements[pirosHelye].BackColor = Color.Red;
