@@ -48,12 +48,16 @@ namespace IRF_Beadando
         {
             int negyzet = osszmezo * osszmezo + 1;
             int pirosHelye = rnd.Next(0, negyzet);
-
             for (int i = 0; i < FieldElements.Count; i++)
             {
                 if (i == pirosHelye)
                 {
                     FieldElements[pirosHelye].BackColor = Color.Red;
+                }
+                else
+                {
+                    FieldElements[i].IsClicked = false;
+                    FieldElements[i].BackColor = Color.White;
                 }
             }
         }
