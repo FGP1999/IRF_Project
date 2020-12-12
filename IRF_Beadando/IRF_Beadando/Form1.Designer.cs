@@ -49,6 +49,7 @@
             // NevTextBox
             // 
             this.NevTextBox.Location = new System.Drawing.Point(129, 107);
+            this.NevTextBox.MaxLength = 50;
             this.NevTextBox.Name = "NevTextBox";
             this.NevTextBox.Size = new System.Drawing.Size(100, 20);
             this.NevTextBox.TabIndex = 1;

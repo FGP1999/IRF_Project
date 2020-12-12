@@ -21,8 +21,8 @@ namespace IRF_Beadando
         {
             InitializeComponent();
             CreatePlayField(meret);
-            NevSajatLabel.Text = nev;
-            IntervalSajatLabel.Text = inter.ToString();
+            NevSajatLabel.Text = "Név: " + nev;
+            IntervalSajatLabel.Text = "Intervallum: " + inter.ToString();
             osszmezo = meret;
             t.Enabled = true;
             t.Interval = inter;
@@ -30,7 +30,7 @@ namespace IRF_Beadando
             t.Tick += T_Tick;
 
             
-            PontSajatLabel.Text = osszpont.ToString();
+            PontSajatLabel.Text = "Pont: " + osszpont.ToString();
         }
         private void CreatePlayField(int tablaMeret)
         {
@@ -50,10 +50,6 @@ namespace IRF_Beadando
         
         private void T_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < FieldElements.Count; i++)
-            {
-                osszpont = osszpont + FieldElements[i].Value;
-            }
             int negyzet = osszmezo * osszmezo + 1;
             int pirosHelye = rnd.Next(0, negyzet);
             for (int i = 0; i < FieldElements.Count; i++)
@@ -67,6 +63,7 @@ namespace IRF_Beadando
                     FieldElements[i].IsClicked = false;
                     FieldElements[i].BackColor = Color.White;
                 }
+                osszpont = osszpont + FieldElements[i].Value;
             }
         }
     }
