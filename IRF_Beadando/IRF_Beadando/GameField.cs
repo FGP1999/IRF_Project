@@ -42,7 +42,6 @@ namespace IRF_Beadando
         {
             if (IsClicked == false)
             {
-                BackColor = Color.Yellow;
                 IsClicked = true;
             }
         }

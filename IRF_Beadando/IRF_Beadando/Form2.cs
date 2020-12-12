@@ -16,6 +16,7 @@ namespace IRF_Beadando
         Timer t = new Timer();
         Random rnd = new Random();
         int osszmezo = 0;
+        int osszpont = 0;
         public Form2(string nev, int inter, int meret)
         {
             InitializeComponent();
@@ -26,7 +27,10 @@ namespace IRF_Beadando
             t.Enabled = true;
             t.Interval = inter;
             t.Start();
-            t.Tick += T_Tick; 
+            t.Tick += T_Tick;
+
+            
+            PontSajatLabel.Text = osszpont.ToString();
         }
         private void CreatePlayField(int tablaMeret)
         {
@@ -46,6 +50,10 @@ namespace IRF_Beadando
         
         private void T_Tick(object sender, EventArgs e)
         {
+            for (int i = 0; i < FieldElements.Count; i++)
+            {
+                osszpont = osszpont + FieldElements[i].Value;
+            }
             int negyzet = osszmezo * osszmezo + 1;
             int pirosHelye = rnd.Next(0, negyzet);
             for (int i = 0; i < FieldElements.Count; i++)
