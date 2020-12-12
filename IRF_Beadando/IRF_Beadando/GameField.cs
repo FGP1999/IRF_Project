@@ -11,38 +11,32 @@ namespace IRF_Beadando
     class GameField : Button
     {
         public bool IsClicked { get; set; }
-        private int __value;
-
-        public int Value
-        {
-            get { return __value; }
-            set
-            {
-                __value = value;
-                if (IsClicked == true && BackColor == Color.Red)
-                {
-                    __value++;
-                }
-
-            }
-        }
+        public int Value { get; set; }
 
         public GameField()
         {
+            Value = 0;
             IsClicked = false;
             BackColor = Color.White;
             Height = 50;
             Width = Height;
             FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             SetStyle(ControlStyles.Selectable, false);
             MouseDown += GameField_MouseDown;
         }
 
         private void GameField_MouseDown(object sender, MouseEventArgs e)
         {
-            if (IsClicked == false)
+            if (BackColor == Color.Red)
             {
                 IsClicked = true;
+                Value = 1;
+            }
+            else
+            {
+                Form.ActiveForm.Hide();
+                MessageBox.Show("Játék vége. Próbálja meg újra!");
             }
         }
     }

@@ -76,7 +76,7 @@
             this.IntervalNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IntervalNumericUpDown.TabIndex = 4;
             this.IntervalNumericUpDown.Value = new decimal(new int[] {
-            500,
+            1000,
             0,
             0,
             0});
