@@ -77,5 +77,11 @@ namespace IRF_Beadando
                 item.IsClicked = false;
             }
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+        }
     }
 }
