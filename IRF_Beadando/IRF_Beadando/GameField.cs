@@ -53,10 +53,6 @@ namespace IRF_Beadando
             {
                 Value++;
             }
-            else
-            {
-                
-            }
         }
     }
 }

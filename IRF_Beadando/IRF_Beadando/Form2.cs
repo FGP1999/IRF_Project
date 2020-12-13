@@ -57,6 +57,13 @@ namespace IRF_Beadando
             foreach (var item in panel1.Controls.OfType<GameField>())
             {
                 osszpont = osszpont + item.Value;
+                if (item.IsClicked == true && item.BackColor != Color.Red)
+                {
+                    ActiveForm.Close();
+                    MessageBox.Show("Játék vége! Próbálja meg újra!");
+                    Form3 f3 = new Form3(felhasznalonev, osszpont, ido, tablaMeret);
+                    f3.ShowDialog();
+                }
             }
             PontSajatLabel.Text = osszpont.ToString() + " Pont";
         }
@@ -65,6 +72,11 @@ namespace IRF_Beadando
         {
             int negyzet = tablaMeret * tablaMeret + 1;
             int pirosHelye = rnd.Next(0, negyzet);
+            foreach (var item in panel1.Controls.OfType<GameField>())
+            {
+                item.Value = 0;
+                item.IsClicked = false;
+            }
             for (int i = 0; i < FieldElements.Count; i++)
             {
                 if (i == pirosHelye)
@@ -75,11 +87,6 @@ namespace IRF_Beadando
                 {
                     FieldElements[i].BackColor = Color.White;
                 }
-            }
-            foreach (var item in panel1.Controls.OfType<GameField>())
-            {
-                item.Value = 0;
-                item.IsClicked = false;
             }
         }
 
