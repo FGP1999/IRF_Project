@@ -56,19 +56,14 @@
             // 
             // IntervalNumericUpDown
             // 
-            this.IntervalNumericUpDown.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.IntervalNumericUpDown.Location = new System.Drawing.Point(129, 155);
             this.IntervalNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
+            10,
             0,
             0,
             0});
             this.IntervalNumericUpDown.Minimum = new decimal(new int[] {
-            500,
+            1,
             0,
             0,
             0});
@@ -76,7 +71,7 @@
             this.IntervalNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IntervalNumericUpDown.TabIndex = 4;
             this.IntervalNumericUpDown.Value = new decimal(new int[] {
-            1000,
+            1,
             0,
             0,
             0});
@@ -90,7 +85,7 @@
             0,
             0});
             this.SizeNumericUpDown.Minimum = new decimal(new int[] {
-            3,
+            4,
             0,
             0,
             0});
@@ -98,7 +93,7 @@
             this.SizeNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.SizeNumericUpDown.TabIndex = 5;
             this.SizeNumericUpDown.Value = new decimal(new int[] {
-            3,
+            4,
             0,
             0,
             0});

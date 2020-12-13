@@ -41,7 +41,6 @@ namespace IRF_Beadando
             Height = 50;
             Width = Height;
             FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             SetStyle(ControlStyles.Selectable, false);
             MouseDown += GameField_MouseDown;
         }

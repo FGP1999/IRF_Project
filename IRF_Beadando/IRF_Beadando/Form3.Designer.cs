@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.eredmenyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eredmenytablaEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eredmenyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eredmenytablaEntitiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -41,14 +46,23 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 40);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(728, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(295, 373);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // eredmenyBindingSource
+            // 
+            this.eredmenyBindingSource.DataSource = typeof(IRF_Beadando.Eredmeny);
+            // 
+            // eredmenytablaEntitiesBindingSource
+            // 
+            this.eredmenytablaEntitiesBindingSource.DataSource = typeof(IRF_Beadando.EredmenytablaEntities1);
             // 
             // Form3
             // 
@@ -60,6 +74,8 @@
             this.Name = "Form3";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eredmenyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eredmenytablaEntitiesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,5 +84,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource eredmenyBindingSource;
+        private System.Windows.Forms.BindingSource eredmenytablaEntitiesBindingSource;
     }
 }

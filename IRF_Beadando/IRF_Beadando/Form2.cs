@@ -12,23 +12,23 @@ namespace IRF_Beadando
 {
     public partial class Form2 : Form
     {
-        EredmenytablaEntities context = new EredmenytablaEntities();
+        EredmenytablaEntities1 context = new EredmenytablaEntities1();
         List<GameField> FieldElements = new List<GameField>();
         Timer t = new Timer();
         Random rnd = new Random();
         int tablaMeret = 0;
         int osszpont = 0;
-        int ido = 0;
+        int sebes = 0;
         string felhasznalonev;
-        public Form2(string nev, int inter, int meret)
+        public Form2(string nev, int sebesseg, int inter, int meret)
         {
             InitializeComponent();
             CreatePlayField(meret);
             NevSajatLabel.Text = "Név: " + nev;
-            IntervalSajatLabel.Text = "Intervallum: " + inter.ToString();
+            SebessegSajatLabel.Text = "Nehézségi szint: " + sebesseg.ToString();
             PontSajatLabel.Text = osszpont.ToString() + " Pont";
             tablaMeret = meret;
-            ido = inter;
+            sebes = sebesseg;
             felhasznalonev = nev; 
 
             t.Enabled = true;
@@ -61,7 +61,7 @@ namespace IRF_Beadando
                 {
                     ActiveForm.Close();
                     MessageBox.Show("Játék vége! Próbálja meg újra!");
-                    Form3 f3 = new Form3(felhasznalonev, osszpont, ido, tablaMeret);
+                    Form3 f3 = new Form3(felhasznalonev, osszpont, sebes, tablaMeret);
                     f3.ShowDialog();
                 }
             }
@@ -93,7 +93,7 @@ namespace IRF_Beadando
         private void Button1_Click(object sender, EventArgs e)
         {
             ActiveForm.Close();
-            Form3 f3 = new Form3(felhasznalonev, osszpont, ido, tablaMeret);
+            Form3 f3 = new Form3(felhasznalonev, osszpont, sebes, tablaMeret);
             f3.ShowDialog();
         }
     }

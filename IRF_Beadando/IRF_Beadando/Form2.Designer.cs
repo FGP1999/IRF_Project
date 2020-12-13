@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.IntervalSajatLabel = new IRF_Beadando.SajatLabel();
+            this.SebessegSajatLabel = new IRF_Beadando.SajatLabel();
             this.PontSajatLabel = new IRF_Beadando.SajatLabel();
             this.NevSajatLabel = new IRF_Beadando.SajatLabel();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,15 +42,15 @@
             this.panel1.Size = new System.Drawing.Size(609, 388);
             this.panel1.TabIndex = 3;
             // 
-            // IntervalSajatLabel
+            // SebessegSajatLabel
             // 
-            this.IntervalSajatLabel.AutoSize = true;
-            this.IntervalSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.IntervalSajatLabel.Location = new System.Drawing.Point(12, 51);
-            this.IntervalSajatLabel.Name = "IntervalSajatLabel";
-            this.IntervalSajatLabel.Size = new System.Drawing.Size(37, 19);
-            this.IntervalSajatLabel.TabIndex = 2;
-            this.IntervalSajatLabel.Text = "label";
+            this.SebessegSajatLabel.AutoSize = true;
+            this.SebessegSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.SebessegSajatLabel.Location = new System.Drawing.Point(12, 51);
+            this.SebessegSajatLabel.Name = "SebessegSajatLabel";
+            this.SebessegSajatLabel.Size = new System.Drawing.Size(37, 19);
+            this.SebessegSajatLabel.TabIndex = 2;
+            this.SebessegSajatLabel.Text = "label";
             // 
             // PontSajatLabel
             // 
@@ -88,7 +88,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.IntervalSajatLabel);
+            this.Controls.Add(this.SebessegSajatLabel);
             this.Controls.Add(this.PontSajatLabel);
             this.Controls.Add(this.NevSajatLabel);
             this.Name = "Form2";
@@ -100,7 +100,7 @@
 
         #endregion
 
-        private SajatLabel IntervalSajatLabel;
+        private SajatLabel SebessegSajatLabel;
         private SajatLabel PontSajatLabel;
         private SajatLabel NevSajatLabel;
         private System.Windows.Forms.Panel panel1;

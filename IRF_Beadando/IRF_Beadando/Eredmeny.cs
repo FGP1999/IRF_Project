@@ -17,7 +17,7 @@ namespace IRF_Beadando
         public int Id { get; set; }
         public string Nev { get; set; }
         public int Pont { get; set; }
-        public int IdoIntervallum { get; set; }
+        public int Sebesseg { get; set; }
         public int TablaMeret { get; set; }
     }
 }
