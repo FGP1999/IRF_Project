@@ -10,13 +10,33 @@ namespace IRF_Beadando
 {
     class GameField : Button
     {
-        public bool IsClicked { get; set; }
         public int Value { get; set; }
+
+        private bool _isClicked;
+
+        public bool IsClicked
+        {
+            get { return _isClicked; }
+            set
+            {
+                _isClicked = value;
+
+                if (_isClicked == true)
+                {
+                    Enabled = false;
+                }
+                else
+                {
+                    Enabled = true;
+                }
+            }
+        }
+
 
         public GameField()
         {
-            Value = 0;
             IsClicked = false;
+            Value = 0;
             BackColor = Color.White;
             Height = 50;
             Width = Height;
@@ -28,10 +48,10 @@ namespace IRF_Beadando
 
         private void GameField_MouseDown(object sender, MouseEventArgs e)
         {
+            IsClicked = true;
             if (BackColor == Color.Red)
             {
-                IsClicked = true;
-                Value = 1;
+                Value++;
             }
             else
             {

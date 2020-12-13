@@ -23,6 +23,8 @@ namespace IRF_Beadando
             CreatePlayField(meret);
             NevSajatLabel.Text = "Név: " + nev;
             IntervalSajatLabel.Text = "Intervallum: " + inter.ToString();
+            PontSajatLabel.Text = osszpont.ToString() + " Pont";
+            osszpont = 1;
             osszmezo = meret;
             t.Enabled = true;
             t.Interval = inter;
@@ -47,7 +49,7 @@ namespace IRF_Beadando
 
         private void Gf_MouseDown(object sender, MouseEventArgs e)
         {
-            PontSajatLabel.Text = "Pont: " + osszpont.ToString();
+            PontSajatLabel.Text = osszpont.ToString() + " Pont";
             foreach (var item in panel1.Controls.OfType<GameField>())
             {
                 osszpont = osszpont + item.Value;
@@ -60,7 +62,6 @@ namespace IRF_Beadando
             int pirosHelye = rnd.Next(0, negyzet);
             for (int i = 0; i < FieldElements.Count; i++)
             {
-                FieldElements[i].IsClicked = false;
                 if (i == pirosHelye)
                 {
                     FieldElements[i].BackColor = Color.Red;
@@ -73,6 +74,7 @@ namespace IRF_Beadando
             foreach (var item in panel1.Controls.OfType<GameField>())
             {
                 item.Value = 0;
+                item.IsClicked = false;
             }
         }
     }

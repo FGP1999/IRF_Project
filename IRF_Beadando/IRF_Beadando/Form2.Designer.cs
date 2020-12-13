@@ -28,31 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
             this.IntervalSajatLabel = new IRF_Beadando.SajatLabel();
             this.PontSajatLabel = new IRF_Beadando.SajatLabel();
             this.NevSajatLabel = new IRF_Beadando.SajatLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(135, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(609, 388);
+            this.panel1.TabIndex = 3;
             // 
             // IntervalSajatLabel
             // 
             this.IntervalSajatLabel.AutoSize = true;
             this.IntervalSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.IntervalSajatLabel.Location = new System.Drawing.Point(13, 99);
+            this.IntervalSajatLabel.Location = new System.Drawing.Point(12, 51);
             this.IntervalSajatLabel.Name = "IntervalSajatLabel";
-            this.IntervalSajatLabel.Size = new System.Drawing.Size(79, 19);
+            this.IntervalSajatLabel.Size = new System.Drawing.Size(37, 19);
             this.IntervalSajatLabel.TabIndex = 2;
-            this.IntervalSajatLabel.Text = "sajatLabel3";
+            this.IntervalSajatLabel.Text = "label";
             // 
             // PontSajatLabel
             // 
             this.PontSajatLabel.AutoSize = true;
             this.PontSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.PontSajatLabel.Location = new System.Drawing.Point(13, 53);
+            this.PontSajatLabel.Location = new System.Drawing.Point(12, 93);
             this.PontSajatLabel.Name = "PontSajatLabel";
-            this.PontSajatLabel.Size = new System.Drawing.Size(79, 19);
+            this.PontSajatLabel.Size = new System.Drawing.Size(0, 19);
             this.PontSajatLabel.TabIndex = 1;
-            this.PontSajatLabel.Text = "sajatLabel2";
             // 
             // NevSajatLabel
             // 
@@ -60,16 +66,9 @@
             this.NevSajatLabel.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.NevSajatLabel.Location = new System.Drawing.Point(12, 9);
             this.NevSajatLabel.Name = "NevSajatLabel";
-            this.NevSajatLabel.Size = new System.Drawing.Size(79, 19);
+            this.NevSajatLabel.Size = new System.Drawing.Size(37, 19);
             this.NevSajatLabel.TabIndex = 0;
-            this.NevSajatLabel.Text = "sajatLabel1";
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(301, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 388);
-            this.panel1.TabIndex = 3;
+            this.NevSajatLabel.Text = "label";
             // 
             // Form2
             // 
