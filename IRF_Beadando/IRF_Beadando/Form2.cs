@@ -12,11 +12,14 @@ namespace IRF_Beadando
 {
     public partial class Form2 : Form
     {
+        EredmenytablaEntities context = new EredmenytablaEntities();
         List<GameField> FieldElements = new List<GameField>();
         Timer t = new Timer();
         Random rnd = new Random();
-        int osszmezo = 0;
+        int tablaMeret = 0;
         int osszpont = 0;
+        int ido = 0;
+        string felhasznalonev;
         public Form2(string nev, int inter, int meret)
         {
             InitializeComponent();
@@ -24,8 +27,10 @@ namespace IRF_Beadando
             NevSajatLabel.Text = "Név: " + nev;
             IntervalSajatLabel.Text = "Intervallum: " + inter.ToString();
             PontSajatLabel.Text = osszpont.ToString() + " Pont";
-            osszpont = 1;
-            osszmezo = meret;
+            tablaMeret = meret;
+            ido = inter;
+            felhasznalonev = nev; 
+
             t.Enabled = true;
             t.Interval = inter;
             t.Start();
@@ -49,16 +54,16 @@ namespace IRF_Beadando
 
         private void Gf_MouseDown(object sender, MouseEventArgs e)
         {
-            PontSajatLabel.Text = osszpont.ToString() + " Pont";
             foreach (var item in panel1.Controls.OfType<GameField>())
             {
                 osszpont = osszpont + item.Value;
             }
+            PontSajatLabel.Text = osszpont.ToString() + " Pont";
         }
 
         private void T_Tick(object sender, EventArgs e)
         {
-            int negyzet = osszmezo * osszmezo + 1;
+            int negyzet = tablaMeret * tablaMeret + 1;
             int pirosHelye = rnd.Next(0, negyzet);
             for (int i = 0; i < FieldElements.Count; i++)
             {
@@ -80,7 +85,8 @@ namespace IRF_Beadando
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
+            ActiveForm.Close();
+            Form3 f3 = new Form3(felhasznalonev, osszpont, ido, tablaMeret);
             f3.ShowDialog();
         }
     }

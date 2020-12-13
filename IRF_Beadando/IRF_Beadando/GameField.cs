@@ -55,8 +55,7 @@ namespace IRF_Beadando
             }
             else
             {
-                Form.ActiveForm.Hide();
-                MessageBox.Show("Játék vége. Próbálja meg újra!");
+                
             }
         }
     }

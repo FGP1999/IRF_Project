@@ -26,8 +26,8 @@ namespace IRF_Beadando
                 return;
             }
             string neve = NevTextBox.Text;
-            int interval = Decimal.ToInt32(IntervalNumericUpDown.Value);
-            int merete = Decimal.ToInt32(SizeNumericUpDown.Value);
+            int interval = Convert.ToInt32(IntervalNumericUpDown.Value);
+            int merete = Convert.ToInt32(SizeNumericUpDown.Value);
             Form2 f2 = new Form2(neve, interval, merete);
             f2.ShowDialog();
         }
