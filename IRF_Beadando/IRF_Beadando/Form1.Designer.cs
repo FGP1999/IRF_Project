@@ -48,7 +48,7 @@
             this.NevTextBox.Location = new System.Drawing.Point(19, 170);
             this.NevTextBox.MaxLength = 20;
             this.NevTextBox.Name = "NevTextBox";
-            this.NevTextBox.Size = new System.Drawing.Size(104, 26);
+            this.NevTextBox.Size = new System.Drawing.Size(149, 26);
             this.NevTextBox.TabIndex = 1;
             // 
             // IntervalNumericUpDown
@@ -66,7 +66,7 @@
             0,
             0});
             this.IntervalNumericUpDown.Name = "IntervalNumericUpDown";
-            this.IntervalNumericUpDown.Size = new System.Drawing.Size(104, 26);
+            this.IntervalNumericUpDown.Size = new System.Drawing.Size(149, 26);
             this.IntervalNumericUpDown.TabIndex = 4;
             this.IntervalNumericUpDown.Value = new decimal(new int[] {
             1,
@@ -89,7 +89,7 @@
             0,
             0});
             this.SizeNumericUpDown.Name = "SizeNumericUpDown";
-            this.SizeNumericUpDown.Size = new System.Drawing.Size(104, 26);
+            this.SizeNumericUpDown.Size = new System.Drawing.Size(149, 26);
             this.SizeNumericUpDown.TabIndex = 5;
             this.SizeNumericUpDown.Value = new decimal(new int[] {
             4,
@@ -156,9 +156,9 @@
             this.sajatLabel3.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.sajatLabel3.Location = new System.Drawing.Point(19, 290);
             this.sajatLabel3.Name = "sajatLabel3";
-            this.sajatLabel3.Size = new System.Drawing.Size(115, 19);
+            this.sajatLabel3.Size = new System.Drawing.Size(162, 19);
             this.sajatLabel3.TabIndex = 12;
-            this.sajatLabel3.Text = "Játéktábla mérete";
+            this.sajatLabel3.Text = "Játéktábla mérete (4-10):";
             this.sajatLabel3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // sajatLabel2
@@ -168,9 +168,9 @@
             this.sajatLabel2.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.sajatLabel2.Location = new System.Drawing.Point(15, 220);
             this.sajatLabel2.Name = "sajatLabel2";
-            this.sajatLabel2.Size = new System.Drawing.Size(109, 19);
+            this.sajatLabel2.Size = new System.Drawing.Size(153, 19);
             this.sajatLabel2.TabIndex = 11;
-            this.sajatLabel2.Text = "Játék sebessége:";
+            this.sajatLabel2.Text = "Játék sebessége (1-10):";
             this.sajatLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // sajatLabel1
@@ -180,9 +180,9 @@
             this.sajatLabel1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.sajatLabel1.Location = new System.Drawing.Point(15, 150);
             this.sajatLabel1.Name = "sajatLabel1";
-            this.sajatLabel1.Size = new System.Drawing.Size(90, 19);
+            this.sajatLabel1.Size = new System.Drawing.Size(208, 19);
             this.sajatLabel1.TabIndex = 10;
-            this.sajatLabel1.Text = "Játékos neve:";
+            this.sajatLabel1.Text = "Játékos neve (max. 20 karakter):";
             this.sajatLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Form1
