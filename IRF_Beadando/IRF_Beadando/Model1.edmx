@@ -10,7 +10,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nev" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nev" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Pont" Type="int" Nullable="false" />
           <Property Name="Sebesseg" Type="int" Nullable="false" />
           <Property Name="TablaMeret" Type="int" Nullable="false" />
@@ -28,12 +28,12 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nev" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Pont" Type="Int32" Nullable="false" />
           <Property Name="Sebesseg" Type="Int32" Nullable="false" />
           <Property Name="TablaMeret" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="EredmenytablaEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EredmenytablaEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Eredmenies" EntityType="Self.Eredmeny" />
         </EntityContainer>
       </Schema>
@@ -41,7 +41,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EredmenytablaModelStoreContainer" CdmEntityContainer="EredmenytablaEntities1">
+        <EntityContainerMapping StorageEntityContainer="EredmenytablaModelStoreContainer" CdmEntityContainer="EredmenytablaEntities2">
           <EntitySetMapping Name="Eredmenies">
             <EntityTypeMapping TypeName="EredmenytablaModel.Eredmeny">
               <MappingFragment StoreEntitySet="Eredmeny">

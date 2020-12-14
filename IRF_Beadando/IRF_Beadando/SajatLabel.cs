@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,10 @@ namespace IRF_Beadando
     {
         public SajatLabel()
         {
-            Width = 20;
-            Height = 10;
-            Font = new System.Drawing.Font("Times New Roman", 12);
+            BackColor = Color.OliveDrab;
+            Font = new Font("Times New Roman",12);
+            TextAlign = ContentAlignment.TopRight;
+            AutoSize = true;
         }
     }
 }

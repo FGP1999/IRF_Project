@@ -17,8 +17,7 @@ namespace IRF_Beadando
             InitializeComponent();
         }
 
-
-        private void StartButton_Click(object sender, EventArgs e)
+        private void StartSajatButton_Click(object sender, EventArgs e)
         {
             int sebesseg = Convert.ToInt32(IntervalNumericUpDown.Value);
             int interval = 0;
@@ -31,8 +30,12 @@ namespace IRF_Beadando
                 this.DialogResult = DialogResult.None;
                 return;
             }
-            Form2 f2 = new Form2(neve,sebesseg, interval, merete);
-            f2.ShowDialog();
+            else
+            {
+                this.Hide();
+                Form2 f2 = new Form2(neve, sebesseg, interval, merete);
+                f2.ShowDialog();
+            }
         }
 
         private static int IntervallumEllenorzes(int sebesseg, int interval)
@@ -79,6 +82,11 @@ namespace IRF_Beadando
             }
 
             return interval;
+        }
+
+        private void ExitSajatButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

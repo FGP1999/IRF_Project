@@ -13,10 +13,10 @@ namespace IRF_Beadando
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EredmenytablaEntities1 : DbContext
+    public partial class EredmenytablaEntities2 : DbContext
     {
-        public EredmenytablaEntities1()
-            : base("name=EredmenytablaEntities1")
+        public EredmenytablaEntities2()
+            : base("name=EredmenytablaEntities2")
         {
         }
     

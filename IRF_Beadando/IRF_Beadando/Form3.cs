@@ -14,7 +14,7 @@ namespace IRF_Beadando
 {
     public partial class Form3 : Form
     {
-        EredmenytablaEntities1 context = new EredmenytablaEntities1();
+        EredmenytablaEntities2 context = new EredmenytablaEntities2();
         List<Eredmeny> Eredmenyek = new List<Eredmeny>();
         Excel.Application xlApp;
         Excel.Workbook xlWB;
@@ -30,7 +30,7 @@ namespace IRF_Beadando
             context.Eredmenies.Add(eredm);
             context.SaveChanges();
 
-            var Eredmeny = from x in context.Eredmenies where x.Nev == felhasznalonev
+            var Eredmeny = from x in context.Eredmenies orderby  x.Pont descending
                            select x;
 
             Eredmenyek = context.Eredmenies.ToList();
@@ -41,9 +41,11 @@ namespace IRF_Beadando
             dataGridView1.Columns[2].HeaderText = "Pontszám";
             dataGridView1.Columns[3].HeaderText = "Nehézségi szint";
             dataGridView1.Columns[4].HeaderText = "Táblaméret";
+
+            SzerzettPontSajatLabel.Text = felhasznalonev + " nevű játékos pontszáma: " + osszpont.ToString();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void MentesExcelSajatButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -102,7 +104,7 @@ namespace IRF_Beadando
             headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             headerRange.EntireColumn.AutoFit();
             headerRange.RowHeight = 40;
-            headerRange.Interior.Color = Color.LightBlue;
+            headerRange.Interior.Color = Color.OliveDrab;
             headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
 
             Excel.Range tableRange = xlSheet.get_Range(GetCell(1, 1), GetCell(Eredmenyek.Count + 1, headers.Length));
@@ -124,6 +126,16 @@ namespace IRF_Beadando
             ExcelCoordinate += x.ToString();
 
             return ExcelCoordinate;
+        }
+
+        private void ExitSajatButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void UjrakezdesSajatButton_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

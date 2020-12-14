@@ -12,7 +12,7 @@ namespace IRF_Beadando
 {
     public partial class Form2 : Form
     {
-        EredmenytablaEntities1 context = new EredmenytablaEntities1();
+        EredmenytablaEntities2 context = new EredmenytablaEntities2();
         List<GameField> FieldElements = new List<GameField>();
         Timer t = new Timer();
         Random rnd = new Random();
@@ -59,7 +59,7 @@ namespace IRF_Beadando
                 osszpont = osszpont + item.Value;
                 if (item.IsClicked == true && item.BackColor != Color.Red)
                 {
-                    ActiveForm.Close();
+                    this.Hide();
                     MessageBox.Show("Játék vége! Próbálja meg újra!");
                     Form3 f3 = new Form3(felhasznalonev, osszpont, sebes, tablaMeret);
                     f3.ShowDialog();
@@ -90,9 +90,9 @@ namespace IRF_Beadando
             }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void JatekVegeSajatButton_Click(object sender, EventArgs e)
         {
-            ActiveForm.Close();
+            this.Hide();
             Form3 f3 = new Form3(felhasznalonev, osszpont, sebes, tablaMeret);
             f3.ShowDialog();
         }
